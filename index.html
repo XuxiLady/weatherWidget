@@ -20,6 +20,22 @@
 
 <script>
 function resizeIframe(obj) {
+  // Get the width of the parent container
+  let containerWidth = document.getElementById('weather-widget-container').offsetWidth;
+
+  // Set the iframe width to the container width
+  obj.style.width = containerWidth + 'px';
+
+  // Get the scroll height of the iframe content
   obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
 }
+
+// Ensure the iframe is resized when the window resizes
+window.addEventListener('resize', function() {
+  let iframe = document.getElementById('weather-widget-iframe');
+  if (iframe) {
+    resizeIframe(iframe);
+  }
+});
+
 </script>
