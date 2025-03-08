@@ -1,41 +1,4 @@
-<div id="weather-widget-container" style="width: 100%;">
-  <iframe 
-      id="weather-widget-iframe"
-      src="https://forecast7.com/en/21d03105d83/hanoi/"
-      frameborder="0"
-      scrolling="no"
-      allowtransparency="true"
-      sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
-      style="width: 100%; border: none;"
-      onload="resizeIframe(this)"
-  >
-  </iframe>
-</div>
-<div>
-  <a 
-      href="https://www.meteoblue.com/en/weather/week/hanoi_vietnam_1581130?utm_source=three_widget&utm_medium=linkus&utm_content=three&utm_campaign=Weather%2BWidget" 
-      target="_blank" 
-      rel="noopener">meteoblue</a>
-</div>
-
+<a class="weatherwidget-io" href="https://forecast7.com/en/21d03105d83/hanoi/" data-label_1="HANOI" data-label_2="WEATHER" data-theme="original" data-basecolor="#fffefe" data-textcolor="#10262e" data-highcolor="#ff9900" data-lowcolor="#3c8dfe" data-cloudcolor="#bebfbf" >HANOI WEATHER</a>
 <script>
-function resizeIframe(obj) {
-  // Get the width of the parent container
-  let containerWidth = document.getElementById('weather-widget-container').offsetWidth;
-
-  // Set the iframe width to the container width
-  obj.style.width = containerWidth + 'px';
-
-  // Get the scroll height of the iframe content
-  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-}
-
-// Ensure the iframe is resized when the window resizes
-window.addEventListener('resize', function() {
-  let iframe = document.getElementById('weather-widget-iframe');
-  if (iframe) {
-    resizeIframe(iframe);
-  }
-});
-
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
