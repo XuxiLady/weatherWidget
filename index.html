@@ -1,16 +1,25 @@
-<iframe 
-    src="https://www.meteoblue.com/en/weather/widget/three/hanoi_vietnam_1581130?geoloc=fixed&nocurrent=0&noforecast=0&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"
-    frameborder="0"
-    scrolling="no"
-    allowtransparency="true"
-    sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
-    style="width: 100%; border: none;"
-    onload="this.style.height=this.contentWindow.document.body.scrollHeight +'px';"
->
-</iframe>
-<div>
-    <a 
-        href="https://www.meteoblue.com/en/weather/week/hanoi_vietnam_1581130?utm_source=three_widget&utm_medium=linkus&utm_content=three&utm_campaign=Weather%2BWidget" 
-        target="_blank" 
-        rel="noopener">meteoblue</a>
+<div id="weather-widget-container" style="width: 100%;">
+  <iframe 
+      id="weather-widget-iframe"
+      src="https://www.meteoblue.com/en/weather/widget/three/hanoi_vietnam_1581130?geoloc=fixed&nocurrent=0&noforecast=0&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"
+      frameborder="0"
+      scrolling="no"
+      allowtransparency="true"
+      sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+      style="width: 100%; border: none;"
+      onload="resizeIframe(this)"
+  >
+  </iframe>
 </div>
+<div>
+  <a 
+      href="https://www.meteoblue.com/en/weather/week/hanoi_vietnam_1581130?utm_source=three_widget&utm_medium=linkus&utm_content=three&utm_campaign=Weather%2BWidget" 
+      target="_blank" 
+      rel="noopener">meteoblue</a>
+</div>
+
+<script>
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+</script>
